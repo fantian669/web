@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>canvas line</title>
+</head>
+<body>
+	<canvas id="demoCanvas" width="400" height="500">
+		
+	</canvas>
+	<script type="text/javascript">
+		var canvasDom=document.getElementById('demoCanvas');
+		var canvasText=canvasDom.getContext('2d');
+		
+		var content= canvasDom.getContext('2d');
+		canvasText.beginPath();
+		canvasText.moveTo(10,10);
+		canvasText.lineTo(100,200);
+		canvasText.lineTo(40,50);
+		canvasText.lineTo(300,200);
+		canvasText.closePath();
+		canvasText.lineWidth=2.0;
+		canvasText.strokeStyle="#cc0000";
+		canvasText.stroke();
+
+		content.moveTo(40,50);
+		content.lineTo(310,410);
+		content.lineWidth=4.0;
+		content.strokeStyle="blue";
+		content.stroke();
+	</script>
+</body>
+</html>
