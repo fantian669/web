@@ -1,0 +1,48 @@
+数组函数 
+
+1.array_map(myfunction,array1,array2,array3...)
+参数	    	描述
+myfunction		必需。用户自定义函数的名称，或者是 null。
+array1			必需。规定数组。
+array2			可选。规定数组。
+array3			可选。规定数组。
+
+函数将用户自定义函数作用到数组中的每个值上，并返回用户自定义函数作用后的带有新值的数组。
+回调函数接受的参数数目应该和传递给 array_map() 函数的数组数目一致。
+
+示例：
+		<?php
+			function myfunction($v1,$v2)
+			{
+				if ($v1===$v2){
+			  		
+			  		return "same";
+			  	}
+				return "different";
+			}
+
+			$a1=array("Horse","Dog","Cat");
+			$a2=array("Cow","Dog","Rat");
+			print_r(array_map("myfunction",$a1,$a2));
+		?>
+
+
+2.filter_var(variable, filter, options)
+参数	    描述
+variable	必需。规定要过滤的变量。
+filter	    可选。规定要使用的过滤器的 ID。
+options  	规定包含标志/选项的数组。检查每个过滤器可能的标志和选项。
+
+filter_var() 函数通过指定的过滤器过滤变量。
+如果成功，则返回已过滤的数据，如果失败，则返回 false。
+
+示例:
+	<?php
+		if(!filter_var("someone@example....com", FILTER_VALIDATE_EMAIL)){
+		 	
+		 	echo("E-mail is not valid");
+		 }else{
+
+		 	echo("E-mail is valid");
+		 }
+	?>
