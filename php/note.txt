@@ -5,3 +5,5 @@
 
 2.关于使用header函数 进行页面的跳转 header('location: http://www.baidu.com');
 注意在location和:之间不能存在空格 且跳转之后页面的后续操作终止exit;
+
+
