@@ -5,6 +5,11 @@
 
  资源 resoource         空 null      (特殊类型)
 
+isset():                        //变量是否已经声明
+empty():                        //变量是否为空
+defined():　　　　　　　　　　　　　　　　　　　　　　　//常量是否已经定义 define()
+array_key_exists(mixed key, array search):        //检查给定的键名或索引是否存在于数组中
+
 */ 
 
  $number=12; //整型
@@ -34,48 +39,18 @@ if(is_string($str1)&&is_string($str2)&&is_string($str3)){
 	echo  '变量$str1$,str2,$str3是字符串';
 }
 
-
+//判断变量是否是数组  is_array();函数判断
 $arr1=array(1,2,3,"hello"); //索引数组  调用数字中元素使用 $arr[0]值为1
 
 $arr2=array('name'=>'jack','age'=>'23'); //关联数组  $arr2['name']值为jack
+//
 
 
 //特殊类型 null 表示什么都没有 即 没有为变量设置任何值 
 //被赋予空的情况有以下三种:1.没有赋任何值   2.被赋值为null 3.被uset函数处理的变量  
+//判断变量是否为null 可以使用 is_null() 函数
 $null= null;
 
 //对象:在面向对象编程的使用   资源:在php使用资源时后自动启动垃圾回收机制,释放资源 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+//判断对象函数 可以使用 is_object() 判断变量类型是否为object
